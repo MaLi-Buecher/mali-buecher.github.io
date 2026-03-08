@@ -1,24 +1,479 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MaLi Bücher</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaLi Bücher | Bücher mit Herz für kleine Entdecker</title>
+    <meta name="description" content="Entdecke die MaLi Bücher Lern- & Kreativreihe für Kinder: Fingerfarben Ausmalbuch, Dinosaurier Malbuch und Coole Mädchen Malbuch – liebevoll gestaltet und direkt bei Amazon erhältlich.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#173f61',
+                            hover: '#112d46'
+                        },
+                        beige: '#fffaf8',
+                        pgreen: '#f7fbef',
+                        pred: '#fff2ee'
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body:['Nunito', 'Century Gothic', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(23, 63, 97, 0.08)',
+                        'card': '0 20px 40px -15px rgba(23, 63, 97, 0.08)',
+                        'lift': '0 24px 60px -18px rgba(23, 63, 97, 0.18)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<body class="font-body text-primary bg-beige antialiased selection:bg-primary selection:text-white">
 
-<body>
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-beige/90 backdrop-blur-md z-50 border-b border-primary/5 transition-all duration-300 shadow-sm" id="header">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#start" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-primary text-white rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                    <i data-lucide="book-heart"></i>
+                </div>
+                <span class="font-heading font-semibold text-2xl tracking-wide text-primary">MaLi Bücher</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8 items-center font-semibold">
+                <a href="#start" class="hover:text-primary/70 transition-colors">Start</a>
+                <a href="#buecher" class="hover:text-primary/70 transition-colors">Bücher</a>
+                <a href="#details" class="hover:text-primary/70 transition-colors">Details</a>
+                <a href="#ueber" class="hover:text-primary/70 transition-colors">Über uns</a>
+                <a href="#impressum" class="text-sm text-primary/60 hover:text-primary transition-colors">Impressum</a>
+                <a href="#datenschutz" class="text-sm text-primary/60 hover:text-primary transition-colors">Datenschutz</a>
+            </nav>
 
-<h1>MaLi Bücher</h1>
-<p>Bücher mit Herz für kleine Entdecker</p>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
 
-<h2>Fingerfarben Ausmalbuch</h2>
-<p>Kreativer Fingerfarben-Spaß für Kinder ab 2 Jahren.</p>
-<a href="https://amzn.eu/d/0ajfWOq5">Bei Amazon ansehen</a>
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-beige border-b border-primary/10 absolute w-full shadow-soft">
+            <nav class="flex flex-col px-6 py-4 gap-4 font-semibold text-center">
+                <a href="#start" class="mobile-link py-2 hover:bg-white rounded-lg">Start</a>
+                <a href="#buecher" class="mobile-link py-2 hover:bg-white rounded-lg">Bücher</a>
+                <a href="#details" class="mobile-link py-2 hover:bg-white rounded-lg">Details</a>
+                <a href="#ueber" class="mobile-link py-2 hover:bg-white rounded-lg">Über uns</a>
+                <a href="#impressum" class="mobile-link py-2 text-sm text-primary/60">Impressum</a>
+                <a href="#datenschutz" class="mobile-link py-2 text-sm text-primary/60">Datenschutz</a>
+            </nav>
+        </div>
+    </header>
 
-<h2>Dinosaurier Malbuch</h2>
-<p>50 Dinosaurier-Ausmalbilder für Kinder ab 6 Jahren.</p>
-<a href="https://amzn.eu/d/0bHZYx8d">Bei Amazon ansehen</a>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="start" class="min-h-[88vh] flex items-center pt-10 pb-20 relative overflow-hidden">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-pgreen rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-pred rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
 
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 z-10">
+                    <div class="inline-block px-4 py-1.5 bg-white rounded-full text-sm font-bold text-primary shadow-sm border border-primary/10 mb-2">
+                        Bücher mit Herz für kleine Entdecker
+                    </div>
+
+                    <h1 class="font-heading text-5xl md:text-6xl xl:text-7xl font-bold leading-tight">
+                        Liebevoll gestaltete Bücher für kleine <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Entdecker</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-primary/80 leading-relaxed max-w-lg">
+                        Die MaLi Bücher Lern- & Kreativreihe bietet kreative und altersgerechte Bücher für Kinder von den ersten Malversuchen bis ins Grundschulalter.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 text-sm font-semibold text-primary/70">
+                        <div class="bg-white border border-primary/10 rounded-full px-4 py-2 shadow-sm">Für verschiedene Altersstufen</div>
+                        <div class="bg-white border border-primary/10 rounded-full px-4 py-2 shadow-sm">Kreativ & kindgerecht</div>
+                        <div class="bg-white border border-primary/10 rounded-full px-4 py-2 shadow-sm">Direkt zu Amazon</div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#buecher" class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-2xl font-bold text-lg text-center transition-all duration-300 shadow-soft hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2">
+                            Unsere Bücher entdecken
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#details" class="bg-white hover:bg-gray-50 text-primary border border-primary/10 px-8 py-4 rounded-2xl font-bold text-lg text-center transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                            <i data-lucide="layout-panel-top"></i>
+                            Buchdetails ansehen
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 hidden md:block">
+                    <div class="aspect-square bg-white rounded-[3rem] shadow-card border border-primary/5 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pgreen/30 via-white to-pred/30"></div>
+
+                        <div class="absolute left-6 bottom-8 w-40 lg:w-44 rotate-[-8deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white">
+                            <img src="assets/fingerfarben-front.png" alt="Fingerfarben Ausmalbuch für Kinder ab 2 Jahren" class="w-full h-full object-cover aspect-[4/5]">
+                        </div>
+
+                        <div class="absolute left-1/2 -translate-x-1/2 top-8 w-40 lg:w-44 rotate-[3deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white z-10">
+                            <img src="assets/dino-front.png" alt="Dinosaurier Malbuch für Kinder ab 6 Jahren" class="w-full h-full object-cover aspect-[4/5]">
+                        </div>
+
+                        <div class="absolute right-6 bottom-10 w-40 lg:w-44 rotate-[9deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white">
+                            <img src="assets/maedchen-front.png" alt="Coole Mädchen Malbuch für Mädchen ab 8 Jahren" class="w-full h-full object-cover aspect-[4/5]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bücher Section -->
+        <section id="buecher" class="py-24 bg-white relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold">Unsere Bücher</h2>
+                    <p class="text-lg text-primary/70 max-w-2xl mx-auto">Entdecken Sie unsere liebevoll gestalteten Mal- und Lernbücher für unterschiedliche Altersstufen.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Buch 1 -->
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5 flex flex-col hover:shadow-lift hover:-translate-y-1 transition-all duration-300 group">
+                        <div class="aspect-[4/3] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative">
+                            <img src="assets/fingerfarben-front.png" 
+                                 alt="Fingerfarben Ausmalbuch Cover"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        
+                        <div class="flex-grow space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-bold px-3 py-1 bg-white rounded-full border border-primary/10 text-primary/70">1–4 Jahre</span>
+                                <span class="text-xs font-bold px-3 py-1 bg-white rounded-full border border-primary/10 text-primary/70">106 Seiten</span>
+                            </div>
+
+                            <div class="space-y-1">
+                                <h3 class="font-heading text-2xl font-bold group-hover:text-blue-600 transition-colors">Fingerfarben Ausmalbuch</h3>
+                                <p class="text-primary/70 font-semibold">Für Kinder ab 2 Jahren – Tiere –</p>
+                            </div>
+                            
+                            <ul class="space-y-2 text-primary/80 mt-4 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> 50 Tiermotive</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> große Fingerfarbenpunkte</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> fördert Feinmotorik</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> ideal für Kinder ab 2 Jahren</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> 106 Seiten</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex gap-2 mb-6">
+                            <img src="assets/finger-1.jpg" alt="Beispielseite Fingerfarben 1" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                            <img src="assets/finger-2.jpg" alt="Beispielseite Fingerfarben 2" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                            <img src="assets/finger-3.jpg" alt="Beispielseite Fingerfarben 3" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                        </div>
+
+                        <div class="mt-auto flex gap-3">
+                            <a href="#detail-fingerfarben" class="flex-1 bg-white border border-primary/10 hover:bg-gray-50 text-primary py-4 rounded-xl font-bold text-center transition-all duration-300">
+                                Details
+                            </a>
+                            <a href="https://amzn.eu/d/0ajfWOq5" target="_blank" rel="noopener noreferrer" class="flex-1 bg-primary hover:bg-primary-hover text-white py-4 rounded-xl font-bold text-center transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                Amazon
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buch 2 -->
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5 flex flex-col hover:shadow-lift hover:-translate-y-1 transition-all duration-300 group">
+                        <div class="aspect-[4/3] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative">
+                            <img src="assets/dino-front.png" 
+                                 alt="Dinosaurier Malbuch Cover"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        
+                        <div class="flex-grow space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-bold px-3 py-1 bg-white rounded-full border border-primary/10 text-primary/70">5–10 Jahre</span>
+                                <span class="text-xs font-bold px-3 py-1 bg-white rounded-full border border-primary/10 text-primary/70">106 Seiten</span>
+                            </div>
+
+                            <div class="space-y-1">
+                                <h3 class="font-heading text-2xl font-bold group-hover:text-blue-600 transition-colors">Dinosaurier Malbuch</h3>
+                                <p class="text-primary/70 font-semibold leading-snug">50 Ausmalbilder mit Land-, Wasser- und Flugdinosauriern | Für Kinder ab 6 Jahren</p>
+                            </div>
+                            
+                            <ul class="space-y-2 text-primary/80 mt-4 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> 50 Dinosaurier</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> Name jedes Dinosauriers auf der Seite</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> Ernährungs-Symbol</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> klare Ausmalflächen</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> 106 Seiten</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex gap-2 mb-6">
+                            <img src="assets/dino-1.jpg" alt="Beispielseite Dino 1" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                            <img src="assets/dino-2.png" alt="Beispielseite Dino 2" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                            <img src="assets/dino-3.png" alt="Beispielseite Dino 3" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                        </div>
+
+                        <div class="mt-auto flex gap-3">
+                            <a href="#detail-dino" class="flex-1 bg-white border border-primary/10 hover:bg-gray-50 text-primary py-4 rounded-xl font-bold text-center transition-all duration-300">
+                                Details
+                            </a>
+                            <a href="https://amzn.eu/d/0bHZYx8d" target="_blank" rel="noopener noreferrer" class="flex-1 bg-primary hover:bg-primary-hover text-white py-4 rounded-xl font-bold text-center transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                Amazon
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buch 3 -->
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5 flex flex-col hover:shadow-lift hover:-translate-y-1 transition-all duration-300 group">
+                        <div class="aspect-[4/3] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative">
+                            <img src="assets/maedchen-front.png" 
+                                 alt="Coole Mädchen Malbuch Cover"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        
+                        <div class="flex-grow space-y-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-bold px-3 py-1 bg-white rounded-full border border-primary/10 text-primary/70">6–12 Jahre</span>
+                                <span class="text-xs font-bold px-3 py-1 bg-white rounded-full border border-primary/10 text-primary/70">108 Seiten</span>
+                            </div>
+
+                            <div class="space-y-1">
+                                <h3 class="font-heading text-2xl font-bold group-hover:text-blue-600 transition-colors">Coole Mädchen Malbuch</h3>
+                                <p class="text-primary/70 font-semibold leading-snug">Ausmalbuch für Mädchen ab 8 Jahren – coole Motive, starke Girls, modernes Malbuch ohne Einhörner oder Prinzessinnen</p>
+                            </div>
+                            
+                            <ul class="space-y-2 text-primary/80 mt-4 mb-6">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> 50 moderne Motive</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> Keine Einhörner, Feen oder Prinzessinnen</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> Große, klare Ausmalflächen</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> Fördert Kreativität und Konzentration</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> 108 Seiten</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex gap-2 mb-6">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm border border-primary/5 flex items-center justify-center text-[10px] text-primary/40 font-semibold">folgt</div>
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm border border-primary/5 flex items-center justify-center text-[10px] text-primary/40 font-semibold">folgt</div>
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm border border-primary/5 flex items-center justify-center text-[10px] text-primary/40 font-semibold">folgt</div>
+                        </div>
+
+                        <div class="mt-auto flex gap-3">
+                            <a href="#detail-maedchen" class="flex-1 bg-white border border-primary/10 hover:bg-gray-50 text-primary py-4 rounded-xl font-bold text-center transition-all duration-300">
+                                Details
+                            </a>
+                            <a href="https://amzn.eu/d/09Qw8j4u" target="_blank" rel="noopener noreferrer" class="flex-1 bg-primary hover:bg-primary-hover text-white py-4 rounded-xl font-bold text-center transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                Amazon
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailbereiche -->
+        <section id="details" class="py-24 bg-pgreen/20 border-y border-primary/5">
+            <div class="max-w-6xl mx-auto px-6 space-y-20">
+
+                <!-- Detail 1 -->
+                <div id="detail-fingerfarben" class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
+                            <img src="assets/fingerfarben-front.png" alt="Frontcover Fingerfarben Ausmalbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Vorderseite</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
+                            <img src="assets/fingerfarben-back.png" alt="Rückseite Fingerfarben Ausmalbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Rückseite</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="inline-block px-4 py-1.5 bg-white rounded-full text-sm font-bold text-primary shadow-sm border border-primary/10">Buch 1</div>
+                        <h2 class="font-heading text-4xl font-bold">Fingerfarben Ausmalbuch</h2>
+                        <p class="text-lg text-primary/75">Für Kinder ab 2 Jahren – Tiere –</p>
+                        <p class="text-primary/80 leading-relaxed">
+                            Dieses liebevoll gestaltete Fingerfarben-Ausmalbuch lädt zum Tupfen, Malen und Stempeln ein. Große, klare Tiermotive mit vorbereiteten Punkten erleichtern den Einstieg und sorgen für erste kreative Erfolgserlebnisse.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Altersgruppe:</strong> 1–4 Jahre</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>ISBN:</strong> 979-8248753932</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Seitenzahl:</strong> 106</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Motive:</strong> 50</div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://amzn.eu/d/0ajfWOq5" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-soft hover:shadow-lg hover:-translate-y-1 flex items-center gap-2">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                Bei Amazon ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail 2 -->
+                <div id="detail-dino" class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 order-2 lg:order-1">
+                        <div class="inline-block px-4 py-1.5 bg-white rounded-full text-sm font-bold text-primary shadow-sm border border-primary/10">Buch 2</div>
+                        <h2 class="font-heading text-4xl font-bold">Dinosaurier Malbuch</h2>
+                        <p class="text-lg text-primary/75">50 Ausmalbilder mit Land-, Wasser- und Flugdinosauriern | Für Kinder ab 6 Jahren</p>
+                        <p class="text-primary/80 leading-relaxed">
+                            Dieses liebevoll gestaltete Dinosaurier-Malbuch lädt Kinder dazu ein, 50 beeindruckende Urzeittiere kreativ zum Leben zu erwecken. Ob Landdinosaurier, Flugsaurier oder Wasserdinosaurier – hier warten spannende Motive mit klaren Linien und kindgerechten Details.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Altersgruppe:</strong> 5–10 Jahre</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>ISBN:</strong> 979-8249703486</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Seitenzahl:</strong> 106</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Motive:</strong> 50</div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://amzn.eu/d/0bHZYx8d" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-soft hover:shadow-lg hover:-translate-y-1 flex items-center gap-2">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                Bei Amazon ansehen
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 order-1 lg:order-2">
+                        <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
+                            <img src="assets/dino-front.png" alt="Frontcover Dinosaurier Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Vorderseite</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
+                            <img src="assets/dino-back.png" alt="Rückseite Dinosaurier Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Rückseite</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail 3 -->
+                <div id="detail-maedchen" class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
+                            <img src="assets/maedchen-front.png" alt="Frontcover Coole Mädchen Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Vorderseite</p>
+                        </div>
+                        <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
+                            <img src="assets/maedchen-back.png" alt="Rückseite Coole Mädchen Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Rückseite</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="inline-block px-4 py-1.5 bg-white rounded-full text-sm font-bold text-primary shadow-sm border border-primary/10">Buch 3</div>
+                        <h2 class="font-heading text-4xl font-bold">Coole Mädchen Malbuch</h2>
+                        <p class="text-lg text-primary/75">Ausmalbuch für Mädchen ab 8 Jahren – coole Motive, starke Girls, modernes Malbuch ohne Einhörner oder Prinzessinnen</p>
+                        <p class="text-primary/80 leading-relaxed">
+                            Dieses Malbuch ist für Mädchen, die ihren eigenen Weg gehen. Statt typischer Prinzessinnen- oder Einhornwelten warten hier coole, selbstbewusste Mädchen in inspirierenden Szenen – sportlich, kreativ, mutig und voller Power.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Altersgruppe:</strong> 6–12 Jahre</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>ISBN:</strong> 979-8250741521</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Seitenzahl:</strong> 108</div>
+                            <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Motive:</strong> 50</div>
+                        </div>
+
+                        <div class="rounded-2xl border border-dashed border-primary/20 bg-white/70 px-5 py-4 text-primary/60">
+                            Beispielseiten werden ergänzt, sobald sie fertig sind.
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://amzn.eu/d/09Qw8j4u" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-soft hover:shadow-lg hover:-translate-y-1 flex items-center gap-2">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                Bei Amazon ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Über MaLi Bücher Section -->
+        <section id="ueber" class="py-24 bg-pgreen/30 relative">
+            <div class="max-w-4xl mx-auto px-6 text-center space-y-10">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold">Über MaLi Bücher</h2>
+                
+                <div class="space-y-6 text-lg text-primary/80 leading-relaxed bg-white p-10 md:p-12 rounded-3xl shadow-card border border-primary/5 text-left">
+                    <p>Die <strong>MaLi Bücher Lern- & Kreativreihe</strong> bietet kreative und altersgerechte Bücher für Kinder von den ersten Malversuchen bis ins Grundschulalter.</p>
+                    
+                    <p>Zur Reihe gehören Malbücher, Lernbücher, Mandalas, Beschäftigungsbücher und Mitmachbücher, die Fantasie, Konzentration und Feinmotorik fördern.</p>
+                    
+                    <p>Ob Dinosaurier-Ausmalbuch, erstes Fingerfarbenbuch oder andere kreative Themen – jedes Buch ist klar strukturiert und kindgerecht gestaltet.</p>
+                    
+                    <p>Die Inhalte verbinden spielerisches Lernen mit kreativer Beschäftigung und eignen sich ideal für Zuhause, unterwegs oder als Geschenkidee.</p>
+                    
+                    <p class="font-semibold text-primary">Die Reihe wächst stetig weiter und begleitet kleine Entdecker beim Malen, Lernen und Gestalten.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Sections -->
+        <section class="py-24 bg-white border-t border-primary/10">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+                
+                <!-- Impressum -->
+                <div id="impressum" class="space-y-6">
+                    <h2 class="font-heading text-3xl font-bold">Impressum</h2>
+                    <div class="text-primary/80 space-y-4">
+                        <p><strong>MaLi Bücher</strong><br>Lern- & Kreativreihe für Kinder</p>
+                        <p><strong>Inhaber</strong><br>Jörn Aldenhoff</p>
+                        <p>Annastraße 17<br>40477 Düsseldorf<br>Deutschland</p>
+                        <p><strong>E-Mail</strong><br><a href="mailto:MaLi-Buecher@web.de" class="text-blue-600 hover:underline">MaLi-Buecher@web.de</a></p>
+                        <p><strong>Verantwortlich für den Inhalt nach §18 Abs.2 MStV</strong><br>Jörn Aldenhoff</p>
+                    </div>
+                </div>
+
+                <!-- Datenschutz -->
+                <div id="datenschutz" class="space-y-6">
+                    <h2 class="font-heading text-3xl font-bold">Datenschutz</h2>
+                    <div class="text-primary/80 space-y-4 text-sm leading-relaxed">
+                        <p>Diese Website dient ausschließlich der Präsentation der Bücher der Reihe MaLi Bücher.</p>
+                        <p>Beim Besuch der Website können durch den Hostinganbieter technische Zugriffsdaten gespeichert werden (z.B. IP-Adresse, Browsertyp, Uhrzeit des Zugriffs).</p>
+                        <p>Auf dieser Website befinden sich Links zu Amazon. Beim Klick auf diese Links wird der Nutzer auf die Website von Amazon weitergeleitet. Für die Datenverarbeitung auf den verlinkten Seiten ist Amazon verantwortlich.</p>
+                        <div class="pt-4 border-t border-primary/10">
+                            <p><strong>Verantwortlicher:</strong><br>Jörn Aldenhoff<br>Annastraße 17<br>40477 Düsseldorf<br>Deutschland</p>
+                            <p class="mt-2"><a href="mailto:MaLi-Buecher@web.de" class="text-blue-600 hover:underline">MaLi-Buecher@web.de</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white/60 py-8 text-center text-sm border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 MaLi Bücher. Alle Rechte vorbehalten.</p>
+            <div class="flex gap-4">
+                <a href="#impressum" class="hover:text-white transition-colors">Impressum</a>
+                <a href="#datenschutz" class="hover:text-white transition-colors">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>

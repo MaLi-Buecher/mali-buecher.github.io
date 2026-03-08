@@ -1,0 +1,17 @@
+/* Custom utility styles */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Offset for fixed header */
+}
+
+/* Custom selection styling */
+::selection {
+    background-color: #173f61;
+    color: white;
+}
