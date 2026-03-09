@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaLi Bücher | Bücher mit Herz für kleine Entdecker</title>
     <meta name="description" content="Entdecke die MaLi Bücher Lern- & Kreativreihe für Kinder: Fingerfarben Ausmalbuch, Dinosaurier Malbuch und Coole Mädchen Malbuch – liebevoll gestaltet und direkt bei Amazon erhältlich.">
+    <meta name="keywords" content="Malbuch Kinder, Fingerfarben Ausmalbuch, Dinosaurier Malbuch, Malbuch Mädchen, Kinderbuch kreativ, Ausmalbuch ab 2 Jahren, Dinosaurier Ausmalbilder Kinder, modernes Malbuch Mädchen">
+    <meta name="author" content="MaLi Bücher">
+
+    <meta property="og:title" content="MaLi Bücher – Kreative Malbücher für Kinder">
+    <meta property="og:description" content="Fingerfarben Ausmalbuch, Dinosaurier Malbuch und Coole Mädchen Malbuch – kreative Bücher für Kinder von 2 bis 12 Jahren.">
+    <meta property="og:image" content="assets/dino-front.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mali-buecher.github.io">
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,52 +49,104 @@
         }
     </script>
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MaLi Bücher",
+      "url": "https://mali-buecher.github.io",
+      "logo": "https://mali-buecher.github.io/assets/logo.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welches Malbuch eignet sich für Kinder ab 2 Jahren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das Fingerfarben Ausmalbuch wurde speziell für Kinder ab 2 Jahren entwickelt. Große Tiermotive mit vorbereiteten Punkten erleichtern den Einstieg und fördern Kreativität und Feinmotorik."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Dinosaurier sind im Dinosaurier Malbuch enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das Dinosaurier Malbuch enthält 50 Motive mit Land-, Wasser- und Flugdinosauriern. Jeder Dino ist benannt und besitzt ein Symbol zur Ernährungsweise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es ein modernes Malbuch für Mädchen ohne Einhörner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Das Coole Mädchen Malbuch zeigt 50 moderne Motive mit sportlichen, kreativen und selbstbewussten Mädchen – bewusst ohne Prinzessinnen oder Einhörner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind die Bücher als Geschenk geeignet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Die MaLi Bücher eignen sich ideal als Geschenk für Kindergeburtstage, Weihnachten oder als kreative Beschäftigung für Zuhause und unterwegs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wo kann man die MaLi Bücher kaufen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alle Bücher sind direkt über Amazon erhältlich. Auf dieser Website finden Sie die entsprechenden Links zu den Buchseiten."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="font-body text-primary bg-beige antialiased selection:bg-primary selection:text-white">
 
-    <!-- Header -->
     <header class="fixed top-0 w-full bg-beige/90 backdrop-blur-md z-50 border-b border-primary/5 transition-all duration-300 shadow-sm" id="header">
-       <a href="#start" class="flex items-center gap-3 group">
-
-    <img 
-        src="assets/logo.png"
-        alt="MaLi Bücher Logo"
-        class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-    >
-
-    <span class="font-heading font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-        MaLi Bücher
-    </span>
-
-</a>
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#start" class="flex items-center gap-3 group">
+                <img 
+                    src="assets/logo.png"
+                    alt="MaLi Bücher Logo"
+                    class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                >
+                <span class="font-heading font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                    MaLi Bücher
+                </span>
+            </a>
             
-            <!-- Desktop Nav -->
             <nav class="hidden md:flex gap-8 items-center font-semibold">
                 <a href="#start" class="hover:text-primary/70 transition-colors">Start</a>
                 <a href="#buecher" class="hover:text-primary/70 transition-colors">Bücher</a>
                 <a href="#details" class="hover:text-primary/70 transition-colors">Details</a>
+                <a href="#faq" class="hover:text-primary/70 transition-colors">FAQ</a>
                 <a href="#ueber" class="hover:text-primary/70 transition-colors">Über uns</a>
                 <a href="#impressum" class="text-sm text-primary/60 hover:text-primary transition-colors">Impressum</a>
                 <a href="#datenschutz" class="text-sm text-primary/60 hover:text-primary transition-colors">Datenschutz</a>
             </nav>
 
-            <!-- Mobile Menu Toggle -->
             <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
 
-        <!-- Mobile Nav -->
         <div id="mobile-menu" class="hidden md:hidden bg-beige border-b border-primary/10 absolute w-full shadow-soft">
             <nav class="flex flex-col px-6 py-4 gap-4 font-semibold text-center">
                 <a href="#start" class="mobile-link py-2 hover:bg-white rounded-lg">Start</a>
                 <a href="#buecher" class="mobile-link py-2 hover:bg-white rounded-lg">Bücher</a>
                 <a href="#details" class="mobile-link py-2 hover:bg-white rounded-lg">Details</a>
+                <a href="#faq" class="mobile-link py-2 hover:bg-white rounded-lg">FAQ</a>
                 <a href="#ueber" class="mobile-link py-2 hover:bg-white rounded-lg">Über uns</a>
                 <a href="#impressum" class="mobile-link py-2 text-sm text-primary/60">Impressum</a>
                 <a href="#datenschutz" class="mobile-link py-2 text-sm text-primary/60">Datenschutz</a>
@@ -94,7 +155,6 @@
     </header>
 
     <main class="pt-20">
-        <!-- Hero Section -->
         <section id="start" class="min-h-[88vh] flex items-center pt-10 pb-20 relative overflow-hidden">
             <div class="absolute top-20 left-10 w-64 h-64 bg-pgreen rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
             <div class="absolute bottom-20 right-10 w-72 h-72 bg-pred rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10"></div>
@@ -135,23 +195,22 @@
                     <div class="aspect-square bg-white rounded-[3rem] shadow-card border border-primary/5 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-br from-pgreen/30 via-white to-pred/30"></div>
 
-                        <div class="absolute left-6 bottom-8 w-40 lg:w-44 rotate-[-8deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white">
-                            <img src="assets/fingerfarben-front.png" alt="Fingerfarben Ausmalbuch für Kinder ab 2 Jahren" class="w-full h-full object-cover aspect-[4/5]">
+                        <div class="absolute left-6 bottom-8 w-40 lg:w-44 rotate-[-8deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white p-2">
+                            <img src="assets/fingerfarben-front.png" alt="Fingerfarben Ausmalbuch für Kinder ab 2 Jahren" class="w-full h-full object-contain aspect-[4/5]">
                         </div>
 
-                        <div class="absolute left-1/2 -translate-x-1/2 top-8 w-40 lg:w-44 rotate-[3deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white z-10">
-                            <img src="assets/dino-front.png" alt="Dinosaurier Malbuch für Kinder ab 6 Jahren" class="w-full h-full object-cover aspect-[4/5]">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-8 w-40 lg:w-44 rotate-[3deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white z-10 p-2">
+                            <img src="assets/dino-front.png" alt="Dinosaurier Malbuch für Kinder ab 6 Jahren" class="w-full h-full object-contain aspect-[4/5]">
                         </div>
 
-                        <div class="absolute right-6 bottom-10 w-40 lg:w-44 rotate-[9deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white">
-                            <img src="assets/maedchen-front.png" alt="Coole Mädchen Malbuch für Mädchen ab 8 Jahren" class="w-full h-full object-cover aspect-[4/5]">
+                        <div class="absolute right-6 bottom-10 w-40 lg:w-44 rotate-[9deg] rounded-3xl overflow-hidden shadow-card hover:shadow-lift hover:-translate-y-2 transition-all duration-300 border border-primary/10 bg-white p-2">
+                            <img src="assets/maedchen-front.png" alt="Coole Mädchen Malbuch für Mädchen ab 8 Jahren" class="w-full h-full object-contain aspect-[4/5]">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bücher Section -->
         <section id="buecher" class="py-24 bg-white relative">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 space-y-4">
@@ -161,12 +220,9 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     
-                    <!-- Buch 1 -->
                     <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5 flex flex-col hover:shadow-lift hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative">
-                            <img src="assets/fingerfarben-front.png" 
-                                 alt="Fingerfarben Ausmalbuch Cover"
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="aspect-[4/5] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative p-4 flex items-center justify-center">
+                            <img src="assets/fingerfarben-front.png" alt="Fingerfarben Ausmalbuch Cover" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         
                         <div class="flex-grow space-y-4">
@@ -190,9 +246,9 @@
                         </div>
                         
                         <div class="flex gap-2 mb-6">
-                            <img src="assets/finger-1.jpg" alt="Beispielseite Fingerfarben 1" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
-                            <img src="assets/finger-2.jpg" alt="Beispielseite Fingerfarben 2" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
-                            <img src="assets/finger-3.jpg" alt="Beispielseite Fingerfarben 3" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                            <img src="assets/finger-1.jpg" alt="Beispielseite Fingerfarben 1" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
+                            <img src="assets/finger-2.jpg" alt="Beispielseite Fingerfarben 2" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
+                            <img src="assets/finger-3.jpg" alt="Beispielseite Fingerfarben 3" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
                         </div>
 
                         <div class="mt-auto flex gap-3">
@@ -206,12 +262,9 @@
                         </div>
                     </div>
 
-                    <!-- Buch 2 -->
                     <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5 flex flex-col hover:shadow-lift hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative">
-                            <img src="assets/dino-front.png" 
-                                 alt="Dinosaurier Malbuch Cover"
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="aspect-[4/5] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative p-4 flex items-center justify-center">
+                            <img src="assets/dino-front.png" alt="Dinosaurier Malbuch Cover" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         
                         <div class="flex-grow space-y-4">
@@ -235,9 +288,9 @@
                         </div>
                         
                         <div class="flex gap-2 mb-6">
-                            <img src="assets/dino-1.jpg" alt="Beispielseite Dino 1" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
-                            <img src="assets/dino-2.png" alt="Beispielseite Dino 2" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
-                            <img src="assets/dino-3.png" alt="Beispielseite Dino 3" class="w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover">
+                            <img src="assets/dino-1.jpg" alt="Beispielseite Dino 1" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
+                            <img src="assets/dino-2.png" alt="Beispielseite Dino 2" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
+                            <img src="assets/dino-3.png" alt="Beispielseite Dino 3" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
                         </div>
 
                         <div class="mt-auto flex gap-3">
@@ -251,12 +304,9 @@
                         </div>
                     </div>
 
-                    <!-- Buch 3 -->
                     <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5 flex flex-col hover:shadow-lift hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative">
-                            <img src="assets/maedchen-front.png" 
-                                 alt="Coole Mädchen Malbuch Cover"
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="aspect-[4/5] bg-white rounded-2xl mb-8 shadow-sm overflow-hidden relative p-4 flex items-center justify-center">
+                            <img src="assets/maedchen-front.png" alt="Coole Mädchen Malbuch Cover" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                         </div>
                         
                         <div class="flex-grow space-y-4">
@@ -280,9 +330,9 @@
                         </div>
                         
                         <div class="flex gap-2 mb-6">
-                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm border border-primary/5 flex items-center justify-center text-[10px] text-primary/40 font-semibold">folgt</div>
-                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm border border-primary/5 flex items-center justify-center text-[10px] text-primary/40 font-semibold">folgt</div>
-                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm border border-primary/5 flex items-center justify-center text-[10px] text-primary/40 font-semibold">folgt</div>
+                            <img src="assets/maedchen-1.jpg" alt="Beispielseite Coole Mädchen Malbuch 1" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
+                            <img src="assets/maedchen-2.jpg" alt="Beispielseite Coole Mädchen Malbuch 2" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
+                            <img src="assets/maedchen-3.jpg" alt="Beispielseite Coole Mädchen Malbuch 3" class="lightbox-img w-12 h-12 rounded-lg shadow-sm border border-primary/5 object-cover cursor-pointer">
                         </div>
 
                         <div class="mt-auto flex gap-3">
@@ -300,19 +350,17 @@
             </div>
         </section>
 
-        <!-- Detailbereiche -->
         <section id="details" class="py-24 bg-pgreen/20 border-y border-primary/5">
             <div class="max-w-6xl mx-auto px-6 space-y-20">
 
-                <!-- Detail 1 -->
                 <div id="detail-fingerfarben" class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
-                            <img src="assets/fingerfarben-front.png" alt="Frontcover Fingerfarben Ausmalbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <img src="assets/fingerfarben-front.png" alt="Frontcover Fingerfarben Ausmalbuch" class="w-full rounded-2xl object-contain aspect-[4/5]">
                             <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Vorderseite</p>
                         </div>
                         <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
-                            <img src="assets/fingerfarben-back.png" alt="Rückseite Fingerfarben Ausmalbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <img src="assets/fingerfarben-back.png" alt="Rückseite Fingerfarben Ausmalbuch" class="w-full rounded-2xl object-contain aspect-[4/5]">
                             <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Rückseite</p>
                         </div>
                     </div>
@@ -339,7 +387,6 @@
                     </div>
                 </div>
 
-                <!-- Detail 2 -->
                 <div id="detail-dino" class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6 order-2 lg:order-1">
                         <div class="inline-block px-4 py-1.5 bg-white rounded-full text-sm font-bold text-primary shadow-sm border border-primary/10">Buch 2</div>
@@ -364,25 +411,24 @@
 
                     <div class="grid grid-cols-2 gap-4 order-1 lg:order-2">
                         <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
-                            <img src="assets/dino-front.png" alt="Frontcover Dinosaurier Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <img src="assets/dino-front.png" alt="Frontcover Dinosaurier Malbuch" class="w-full rounded-2xl object-contain aspect-[4/5]">
                             <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Vorderseite</p>
                         </div>
                         <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
-                            <img src="assets/dino-back.png" alt="Rückseite Dinosaurier Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <img src="assets/dino-back.png" alt="Rückseite Dinosaurier Malbuch" class="w-full rounded-2xl object-contain aspect-[4/5]">
                             <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Rückseite</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Detail 3 -->
                 <div id="detail-maedchen" class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
-                            <img src="assets/maedchen-front.png" alt="Frontcover Coole Mädchen Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <img src="assets/maedchen-front.png" alt="Frontcover Coole Mädchen Malbuch" class="w-full rounded-2xl object-contain aspect-[4/5]">
                             <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Vorderseite</p>
                         </div>
                         <div class="bg-white rounded-3xl p-4 shadow-card border border-primary/5">
-                            <img src="assets/maedchen-back.png" alt="Rückseite Coole Mädchen Malbuch" class="w-full rounded-2xl object-cover aspect-[4/5]">
+                            <img src="assets/maedchen-back.png" alt="Rückseite Coole Mädchen Malbuch" class="w-full rounded-2xl object-contain aspect-[4/5]">
                             <p class="mt-3 text-sm font-semibold text-primary/60 text-center">Rückseite</p>
                         </div>
                     </div>
@@ -401,8 +447,13 @@
                             <div class="bg-white rounded-2xl border border-primary/10 px-4 py-3"><strong>Motive:</strong> 50</div>
                         </div>
 
-                        <div class="rounded-2xl border border-dashed border-primary/20 bg-white/70 px-5 py-4 text-primary/60">
-                            Beispielseiten werden ergänzt, sobald sie fertig sind.
+                        <div>
+                            <p class="text-sm font-semibold text-primary/60 mb-3">Beispielseiten</p>
+                            <div class="grid grid-cols-3 gap-3">
+                                <img src="assets/maedchen-1.jpg" alt="Beispielseite Coole Mädchen Malbuch 1" class="lightbox-img w-full rounded-2xl border border-primary/10 shadow-sm object-cover aspect-[3/4] cursor-pointer">
+                                <img src="assets/maedchen-2.jpg" alt="Beispielseite Coole Mädchen Malbuch 2" class="lightbox-img w-full rounded-2xl border border-primary/10 shadow-sm object-cover aspect-[3/4] cursor-pointer">
+                                <img src="assets/maedchen-3.jpg" alt="Beispielseite Coole Mädchen Malbuch 3" class="lightbox-img w-full rounded-2xl border border-primary/10 shadow-sm object-cover aspect-[3/4] cursor-pointer">
+                            </div>
                         </div>
 
                         <div class="flex flex-wrap gap-3">
@@ -417,30 +468,58 @@
             </div>
         </section>
 
-        <!-- Über MaLi Bücher Section -->
+        <section id="faq" class="py-24 bg-white border-y border-primary/5">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-16 space-y-4">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold">Häufige Fragen</h2>
+                    <p class="text-lg text-primary/70 max-w-2xl mx-auto">Antworten auf typische Fragen zu unseren Malbüchern und zur MaLi Bücher Reihe.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5">
+                        <h3 class="font-heading text-2xl font-bold">Welches Malbuch eignet sich für Kinder ab 2 Jahren?</h3>
+                        <p class="mt-3 text-primary/75 leading-relaxed">Das Fingerfarben Ausmalbuch der MaLi Bücher Reihe wurde speziell für Kinder ab 2 Jahren entwickelt. Große Tiermotive mit vorbereiteten Punkten erleichtern den Einstieg und fördern Kreativität und Feinmotorik.</p>
+                    </div>
+
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5">
+                        <h3 class="font-heading text-2xl font-bold">Welche Dinosaurier sind im Dinosaurier Malbuch enthalten?</h3>
+                        <p class="mt-3 text-primary/75 leading-relaxed">Das Dinosaurier Malbuch enthält 50 Motive mit Land-, Wasser- und Flugdinosauriern. Jeder Dino ist benannt und besitzt ein Symbol zur Ernährungsweise.</p>
+                    </div>
+
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5">
+                        <h3 class="font-heading text-2xl font-bold">Gibt es ein modernes Malbuch für Mädchen ohne Einhörner?</h3>
+                        <p class="mt-3 text-primary/75 leading-relaxed">Ja. Das Coole Mädchen Malbuch zeigt 50 moderne Motive mit sportlichen, kreativen und selbstbewussten Mädchen – bewusst ohne Prinzessinnen, Feen oder Einhörner.</p>
+                    </div>
+
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5">
+                        <h3 class="font-heading text-2xl font-bold">Sind die Bücher auch als Geschenk geeignet?</h3>
+                        <p class="mt-3 text-primary/75 leading-relaxed">Ja. Die MaLi Bücher eignen sich ideal als Geschenk für Kindergeburtstage, Weihnachten oder als kreative Beschäftigung für Zuhause und unterwegs.</p>
+                    </div>
+
+                    <div class="bg-beige rounded-3xl p-8 shadow-card border border-primary/5">
+                        <h3 class="font-heading text-2xl font-bold">Wo kann man die MaLi Bücher kaufen?</h3>
+                        <p class="mt-3 text-primary/75 leading-relaxed">Alle Bücher sind direkt über Amazon erhältlich. Auf dieser Website finden Sie die entsprechenden Links zu den jeweiligen Buchseiten.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="ueber" class="py-24 bg-pgreen/30 relative">
             <div class="max-w-4xl mx-auto px-6 text-center space-y-10">
                 <h2 class="font-heading text-4xl md:text-5xl font-bold">Über MaLi Bücher</h2>
                 
                 <div class="space-y-6 text-lg text-primary/80 leading-relaxed bg-white p-10 md:p-12 rounded-3xl shadow-card border border-primary/5 text-left">
                     <p>Die <strong>MaLi Bücher Lern- & Kreativreihe</strong> bietet kreative und altersgerechte Bücher für Kinder von den ersten Malversuchen bis ins Grundschulalter.</p>
-                    
                     <p>Zur Reihe gehören Malbücher, Lernbücher, Mandalas, Beschäftigungsbücher und Mitmachbücher, die Fantasie, Konzentration und Feinmotorik fördern.</p>
-                    
                     <p>Ob Dinosaurier-Ausmalbuch, erstes Fingerfarbenbuch oder andere kreative Themen – jedes Buch ist klar strukturiert und kindgerecht gestaltet.</p>
-                    
                     <p>Die Inhalte verbinden spielerisches Lernen mit kreativer Beschäftigung und eignen sich ideal für Zuhause, unterwegs oder als Geschenkidee.</p>
-                    
                     <p class="font-semibold text-primary">Die Reihe wächst stetig weiter und begleitet kleine Entdecker beim Malen, Lernen und Gestalten.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Legal Sections -->
         <section class="py-24 bg-white border-t border-primary/10">
             <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
-                
-                <!-- Impressum -->
                 <div id="impressum" class="space-y-6">
                     <h2 class="font-heading text-3xl font-bold">Impressum</h2>
                     <div class="text-primary/80 space-y-4">
@@ -452,7 +531,6 @@
                     </div>
                 </div>
 
-                <!-- Datenschutz -->
                 <div id="datenschutz" class="space-y-6">
                     <h2 class="font-heading text-3xl font-bold">Datenschutz</h2>
                     <div class="text-primary/80 space-y-4 text-sm leading-relaxed">
@@ -465,7 +543,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
@@ -479,6 +556,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[999] p-6">
+        <div class="relative max-w-5xl w-full flex items-center justify-center">
+            <button id="lightbox-close" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:opacity-70 transition-opacity">
+                ✕
+            </button>
+            <img id="lightbox-img" src="" alt="Großansicht Beispielbild" class="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl bg-white">
+        </div>
+    </div>
 
     <script type="module" src="script.js"></script>
 </body>
